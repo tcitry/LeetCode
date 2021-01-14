@@ -105,3 +105,6 @@ ENV/
 
 # custom
 .idea/
+.DS_Store
+cmake-build-debug/
+*/a.out
