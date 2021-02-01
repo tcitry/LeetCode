@@ -5,6 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(Leetcode
-        0000Test/main.cpp
-        )
+add_executable(Leetcode 0001-两数之和/main.cpp)

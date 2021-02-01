@@ -108,3 +108,9 @@ ENV/
 .DS_Store
 cmake-build-debug/
 */a.out
+.vscode
+
+#Added by cargo
+
+/target
+
