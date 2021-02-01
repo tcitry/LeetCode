@@ -11,19 +11,11 @@ https://leetcode-cn.com/problems/add-to-array-form-of-integer/
 
 最后针对长数组和短数组做相加运算。
 
-## 关键点
-
--  找出长数组和短数组
-- 两数组相加
-
 ## 代码
-
-- 语言支持：Go
 
 Go Code:
 
 ```go
-
 func addToArrayForm(A []int, K int) []int {
 	var addFlag bool
 
@@ -73,8 +65,6 @@ func addToArrayForm(A []int, K int) []int {
 	}
 	return gs
 }
-
-
 ```
 
 
@@ -86,9 +76,6 @@ func addToArrayForm(A []int, K int) []int {
 - 空间复杂度：$O(n)$
 
 
-执行用时：
-28 ms, 在所有 Go 提交中击败了97.84%的用户
-内存消耗：
-6.6 MB, 在所有 Go 提交中击败了77.35%的用户
+执行用时：28 ms, 在所有 Go 提交中击败了97.84%的用户
 
-
+内存消耗：6.6 MB, 在所有 Go 提交中击败了77.35%的用户
