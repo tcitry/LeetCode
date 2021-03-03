@@ -2,26 +2,24 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"unicode"
 )
 
 // 输入：s = "3[a]2[bc]"
 // 输出："aaabcbc"
 func main() {
-	s := 3
-	fmt.Println(fmt.Sprint(s), ">>>", strconv.Itoa(s))
 	fmt.Println("result: ", decodeString("3[a2[c]]"))
 }
 
 func decodeString(s string) string {
+	
 	return ""
 }
 
 func decodeString0(s string) string {
 	sStack := make([]byte, 0)
 	countStack := make([]int, 0)
-	sIndex := make([]int, 0)
+	stackIndex := make([]int, 0)
 	var count int
 	for i := 0; i < len(s); i++ {
 		if s[i] >= '0' && s[i] <= '9' {
@@ -30,13 +28,13 @@ func decodeString0(s string) string {
 			countStack = append(countStack, count)
 			count = 0
 
-			sIndex = append(sIndex, len(sStack))
+			stackIndex = append(stackIndex, len(sStack))
 		} else if s[i] == ']' {
 			c := countStack[len(countStack)-1]
 			countStack = countStack[:len(countStack)-1]
 
-			index := sIndex[len(sIndex)-1]
-			sIndex = sIndex[:len(sIndex)-1]
+			index := stackIndex[len(stackIndex)-1]
+			stackIndex = stackIndex[:len(stackIndex)-1]
 
 			str := string(sStack[index:])
 			sStack = sStack[:index]
