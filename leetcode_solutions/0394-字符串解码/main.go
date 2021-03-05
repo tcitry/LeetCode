@@ -12,7 +12,7 @@ func main() {
 }
 
 func decodeString(s string) string {
-	
+
 	return ""
 }
 
