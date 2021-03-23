@@ -8,4 +8,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().twoSum([1,2,3], 5))
+    print(Solution().twoSum([10, 20, 30], 30))
