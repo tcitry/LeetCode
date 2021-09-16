@@ -1,7 +1,9 @@
-def main():
-    for i in range(3):
-        print(i)
+def main(name):
+    print(
+        f"hello {name}"
+        f"world {name}"
+    )
 
 
 if __name__ == "__main__":
-    main()
+    main("ssss")

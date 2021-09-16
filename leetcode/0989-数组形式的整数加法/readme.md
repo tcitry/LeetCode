@@ -2,7 +2,6 @@
 
 https://leetcode-cn.com/problems/add-to-array-form-of-integer/
 
-
 ## 思路
 
 主要是要构造两个数组相加。
@@ -67,7 +66,6 @@ func addToArrayForm(A []int, K int) []int {
 }
 ```
 
-
 **复杂度分析**
 
 令 n 为数组长度。
@@ -75,13 +73,10 @@ func addToArrayForm(A []int, K int) []int {
 - 时间复杂度：$O(n)$
 - 空间复杂度：$O(n)$
 
+执行用时：28 ms, 在所有 Go 提交中击败了 97.84%的用户
 
-执行用时：28 ms, 在所有 Go 提交中击败了97.84%的用户
-
-内存消耗：6.6 MB, 在所有 Go 提交中击败了77.35%的用户
+内存消耗：6.6 MB, 在所有 Go 提交中击败了 77.35%的用户
 
 ## 总结
 
 代码看起来很繁琐，需要看下别人的优秀实现
-
-
