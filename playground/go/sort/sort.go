@@ -4,7 +4,10 @@ import "fmt"
 
 func main() {
 	l := []int{10, 2, 3, 23, 11, 20, 1}
-	fmt.Println("冒泡:", maopao(l))
+	fmt.Println("冒泡排序:", maopao(l))
+	fmt.Println("插入排序:", insert(l))
+	fmt.Println("选择排序:", selectSort(l))
+	fmt.Println("快速排序:", quick(l))
 }
 
 func maopao(lst []int) []int {
