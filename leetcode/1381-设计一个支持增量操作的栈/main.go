@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	fmt.Println(">>>>>>>")
 	s := make([]int, 10)
+	fmt.Println(s)
 	fmt.Println(len(s), cap(s), s)
 	obj := Constructor(10)
 	fmt.Println("stack is ", obj.Stack)
