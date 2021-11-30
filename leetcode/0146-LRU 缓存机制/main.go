@@ -8,19 +8,31 @@ package main
  */
 
 type LRUCache struct {
-	Key   int
-	Value int
-	Pre   *LRUCache
-	Next  *LRUCache
+	size       int
+	capacity   int
+	cache      map[int]*DLinkedNode
+	head, tail *DLinkedNode
+}
+
+type DLinkedNode struct {
+	key, value int
+	prev, next *DLinkedNode
 }
 
 func Constructor(capacity int) LRUCache {
-	var lru LRUCache
-	return lru
+	node := &LRUCache{
+		capacity: capacity,
+		head:     &DLinkedNode{0, 0, nil, nil},
+		tail:     &DLinkedNode{0, 0, nil, nil},
+		cache:    map[int]*DLinkedNode{},
+	}
+	return *node
 }
 
 func (this *LRUCache) Get(key int) int {
-	return -1
+	node := this.cache[key]
+	ret := node.value
+	return ret
 }
 
 func (this *LRUCache) Put(key int, value int) {
