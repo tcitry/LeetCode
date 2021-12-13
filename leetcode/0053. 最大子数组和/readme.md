@@ -7,4 +7,7 @@
 
 https://leetcode-cn.com/problems/maximum-subarray/solution/
 
+## 自底向上迭代
+
+很明显是一个动态规划的问题，一次遍历就可以解决。
 
