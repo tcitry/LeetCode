@@ -33,9 +33,6 @@ func helper(cost []int, n int) int {
 
 针对递归进行优化，缓存计算结果。
 
-```go
-
-```
 
 ## 自底向上
 

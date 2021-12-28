@@ -4,6 +4,7 @@ https://leetcode-cn.com/problems/decode-string/
 ## 题解
 
 第一次按照“3[a]2[bc]”实现如下，但是发现官方的用例为"3[a2[c]]"，所以不能满足，没有明确理解题意。
+
 ```go
 func decodeString(s string) string {
 	var start, end, times int
@@ -35,6 +36,8 @@ func decodeString(s string) string {
 后来发现可以靠遍历和递归解决。
 
 ## 递归
+
+
 
 
 

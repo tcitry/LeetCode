@@ -8,16 +8,11 @@
  */
 /**
  * @param {TreeNode} root
+ * @param {number} targetSum
  * @return {boolean}
  */
 
 // todo
-var isSymmetric = function(root) {
-    if (root.left === root.right) {
-        return n+1
-    }
-    let inorder = function (node) {
-        if (node === null) {
-        }
-    }
+var hasPathSum = function(root, targetSum) {
+
 };
