@@ -1,5 +1,6 @@
+https://leetcode.cn/problems/two-sum/
 
-## 解法
+## 解法一：两层 for 循环暴力排查
 
 第一道题，没啥好说的。
 
@@ -30,3 +31,19 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
+## 解法二：map
+
+避免两层嵌套 for 循环，使用 map 存储已经读取的值，在后面通过读取 map 来判断是否在 map 中。
+
+```js
+var twoSum = function (nums, target) {
+    let map = {};
+    for (let i = 0; i < nums.length; i++) {
+        let diff = target - nums[i];
+        if (map[diff] !== undefined) {
+            return [map[diff], i];
+        }
+        map[nums[i]] = i;
+    }
+};
+```

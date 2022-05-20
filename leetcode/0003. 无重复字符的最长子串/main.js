@@ -1,10 +1,3 @@
-https://leetcode.cn/problems/longest-substring-without-repeating-characters/
-
-## 解法一：滑动窗口+map
-
-始终维护一个长度变量 max
-
-```js
 var lengthOfLongestSubstring = function (s) {
     let max = 0;
     let start = 0;
@@ -18,5 +11,7 @@ var lengthOfLongestSubstring = function (s) {
     }
     return max;
 };
-```
 
+(()=>{
+    console.log(lengthOfLongestSubstring('abcabcbb'));
+})()
