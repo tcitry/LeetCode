@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
+
+// 第一次方案，未考虑重复的情况
 // var threeSum = function (nums) {
 //   let ret = [];
 //   nums.sort((a, b) => {
@@ -19,6 +21,7 @@
 //   return ret;
 // };
 
+// todo
 var threeSum = function (nums) {
     let ret = [];
     nums.sort((a, b) => {

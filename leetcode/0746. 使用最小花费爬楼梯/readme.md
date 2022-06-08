@@ -33,6 +33,32 @@ func helper(cost []int, n int) int {
 
 针对递归进行优化，缓存计算结果。
 
+```js
+/**
+ * @param {number[]} cost
+ * @return {number}
+ */
+var minCostClimbingStairs = function (cost) {
+  if (cost.length === 0) {
+    return 0;
+  }
+  let dp = [];
+  let n = cost.length;
+  helper(n, cost, dp);
+  return Math.min(dp[n - 2], dp[n - 1]);
+};
+
+var helper = function (i, cost, dp) {
+  if (i < 2) {
+    dp[i] = cost[i];
+    return;
+  }
+  helper(i - 1, cost, dp);
+  helper(i - 2, cost, dp);
+  dp[i] = Math.min(dp[i - 1], dp[i - 2]) + cost[i];
+};
+```
+
 
 ## 自底向上
 

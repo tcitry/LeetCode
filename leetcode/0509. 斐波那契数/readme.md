@@ -38,3 +38,18 @@ function fib(n: number): number {
     return total
 };
 ```
+
+## 迭代 二
+
+```js
+var fib = function(n) {
+    if (n < 2) {
+        return n
+    }
+    let dp = [0, 1]
+    for (let i = 2; i< n; i ++) {
+        dp[i%2] = dp[1] + dp[0]
+    }
+    return dp[0]+ dp[1]
+};
+```
