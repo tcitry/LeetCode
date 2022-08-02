@@ -2,7 +2,6 @@ let l = [
   1, 2, 3, 4, 3, 2, 2, 3, 4, 45, 6, 5, 4, 3, 45, 5, 6, 5, 4, 33, 2, 4, 5,
 ];
 
-
 let nums = [1, 2, 4, 3, 5, 6, 7, 8, 9, 10];
 
 let nums1 = new Array(10, 2, 4, 3, 5, 6, 7, 8, 9, 100);
@@ -162,9 +161,8 @@ function quickSort(nums) {
         i++;
       }
     }
-    let temp = nums[i];
-    nums[i] = nums[end];
-    nums[end] = temp;
+    nums[end] = nums[i];
+    nums[i] = pivot;
     return i;
   }
   function sort(nums, start, end) {
@@ -178,7 +176,6 @@ function quickSort(nums) {
   sort(nums, 0, nums.length - 1);
   return nums;
 }
-
 
 function quickSortStack(nums) {
   function sort(nums, start, end) {
@@ -207,9 +204,8 @@ function quickSortStack(nums) {
         i++;
       }
     }
-    let temp = nums[i];
-    nums[i] = nums[end];
-    nums[end] = temp;
+    nums[end] = nums[i];
+    nums[i] = pivot;
     return i;
   }
   sort(nums, 0, nums.length - 1);
@@ -253,4 +249,4 @@ function radixSort(nums) {
   return nums;
 }
 
-console.log(quickSort(nums1));
+console.log(quickSortStack(nums1));
